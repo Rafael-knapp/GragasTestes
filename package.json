@@ -1,0 +1,16 @@
+{
+  "name": "gragas",
+  "version": "1.0.0",
+  "description": "Sistema GraGás - Delivery de Gás",
+  "main": "./src/Electron/Main.js",
+  "type": "commonjs",
+  "scripts": {
+    "start": "electron .",
+    "dev": "electron ."
+  },
+  "dependencies": {
+    "electron": "^41.2.0",
+    "express": "^5.2.1",
+    "mysql2": "^3.20.0"
+  }
+}

@@ -1,0 +1,232 @@
+
+
+/* Configurações Globais */
+* {
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+body.login {
+    background-color: #1e40af;
+}
+
+.card {
+    background: white;
+    border-radius: 20px;
+    max-width: 420px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+    overflow: hidden;
+}
+
+.header-azul {
+    background-color: var(--azul);
+    padding: 30px 20px;
+    text-align: center;
+    color: white;
+}
+
+.troca-tela {
+    display: flex;
+    background: #f3f4f6;
+    padding: 5px;
+    border-radius: 12px;
+    margin-bottom: 25px;
+}
+
+.BotaoEntrar.active,
+.BotaoCadastro.active {
+    background: white;
+    color: var(--azul);
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.input {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid #d1d5db;
+    border-radius: 12px;
+}
+
+.Blogin,
+.BotaoRegistrar {
+    background-color: var(--azul);
+    color: white;
+    padding: 15px;
+    border: none;
+    border-radius: 12px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+
+body {
+    background-color: #1e40af; /* Fundo azul escuro em volta do card */
+}
+
+.container {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+/* O Card em si */
+.card {
+    background: white;
+    border-radius: 20px; /* Bordas arredondadas da imagem */
+    width: 100%;
+    max-width: 420px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    overflow: hidden; /* Corta o cabeçalho azul nas pontas arredondadas */
+}
+
+/* Cabeçalho Azul (Topo do Card) */
+.header-azul {
+    background-color: #2563eb;
+    padding: 30px 20px;
+    text-align: center;
+    color: white;
+}
+
+.logo-texto {
+    font-size: 2.2rem;
+    font-weight: bold;
+}
+
+.logo-subtitulo {
+    font-size: 0.9rem;
+    margin-top: 5px;
+    opacity: 0.9;
+}
+
+.corpo-card {
+    padding: 25px;
+}
+
+/* Alternador de Abas (Entrar / Criar Conta) */
+.troca-tela {
+    display: flex;
+    background: #f3f4f6;
+    padding: 5px;
+    border-radius: 12px;
+    margin-bottom: 25px;
+}
+
+.BotaoEntrar, .BotaoCadastro {
+    flex: 1;
+    border: none;
+    background: transparent;
+    padding: 10px;
+    border-radius: 10px;
+    font-weight: 600;
+    color: #6b7280;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+/* A classe active define quem está com fundo branco (Aba selecionada) */
+.BotaoEntrar.active, .BotaoCadastro.active {
+    background: white;
+    color: #2563eb;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Espaçamento dos Formulários */
+.formulario-email, .Formulario-Cadastro {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+/* Labels e Inputs Gerais */
+label {
+    display: block;
+    font-size: 0.85rem;
+    font-weight: bold;
+    color: #374151;
+    margin-bottom: 5px;
+}
+
+.input {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid #d1d5db;
+    border-radius: 12px;
+    outline: none;
+    transition: border-color 0.3s;
+}
+
+.input:focus {
+    border-color: #2563eb;
+}
+
+/* Esqueceu a senha */
+.esqueceu-senha {
+    text-align: right;
+    margin-top: -5px;
+}
+
+.esqueceu-senha a {
+    color: #2563eb;
+    text-decoration: none;
+    font-size: 0.85rem;
+}
+
+/* Títulos das sessões de cadastro */
+.Titulo-sessao {
+    font-size: 0.8rem;
+    font-weight: bold;
+    color: #1e40af;
+    text-transform: uppercase;
+    margin-top: 10px;
+    border-bottom: 1px solid #e5e7eb;
+    padding-bottom: 5px;
+}
+
+/* Grid Lado a Lado (Data e Telefone) */
+.FormularioDataNasc {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+}
+
+/* Botões Azuis Principais */
+.Blogin, .BotaoRegistrar {
+    width: 100%;
+    background-color: #2563eb;
+    color: white;
+    padding: 15px;
+    border: none;
+    border-radius: 12px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.Blogin:hover, .BotaoRegistrar:hover {
+    background-color: #1d4ed8;
+}
+
+/* Botão Cancelar (Cinza) */
+.BotaoCancelar {
+    width: 100%;
+    background-color: #f3f4f6;
+    color: #374151;
+    padding: 15px;
+    border: none;
+    border-radius: 12px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+    margin-top: 10px;
+}
+
+.texto-vermelho {
+    color: red;
+}
+
+

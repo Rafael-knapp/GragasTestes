@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GraGás - Início</title>
+    <link rel="stylesheet" href="../css/principal.css">
+        <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+    <header class="navbar">
+        <div class="navbar-logo">
+            <img src="./img/gragasLogo.png" alt="GraGás">
+            <strong>GraGás</strong>
+        </div>
+        <div class="navbar-acoes">
+            <button class="btn-carrinho" id="btnAbrirCarrinho">
+                <img src="../img/carrinho.png" alt="Carrinho">
+                <span class="badge-carrinho" id="badgeCarrinho">0</span>
+            </button>
+            <button class="btn-perfil" onclick="window.location.href='fornecedor.html'">
+                <img src="../img/iconeperfil.png" alt="Perfil">
+            </button>
+        </div>
+    </header>
+
+   <div class="banner-endereco" id="bannerEndereco" onclick="window.location.href='../html/localizacao.html'">
+    <div class="bloco-endereco-info">
+        <img src="../img/iconedeloc.png" alt="Localização" class="icon-pin">
+        <p id="textoEndereco">Carregando endereço...</p>
+    </div>
+    <img src="../img/setaicone.png" alt="Seta" class="icon-seta">
+</div>
+
+    <main class="main-wrapper">
+        <section class="secao-boas-vindas">
+            <h2 id="saudacao">Olá!</h2>
+            <p>Peça seu gás com entrega rápida e segurança.</p>
+        </section>
+
+        <section>
+            <h2 style="margin-bottom: 25px; color: var(--azul);">Produtos</h2>
+            <div class="grid-produtos" id="gridProdutos">
+                </div>
+        </section>
+    </main>
+
+    <div class="overlay" id="overlay"></div>
+    <aside class="carrinho-drawer" id="carrinhoDrawer">
+        <div class="carrinho-header">
+            <h2>Seu Carrinho</h2>
+            <button id="btnFecharCarrinho" class="btn-fechar-carrinho">
+                <img src="../img/iconedecancelar.png" width="25">
+            </button>
+        </div>
+        
+        <div class="carrinho-corpo">
+            <div class="carrinho-vazio" id="carrinhoVazio">
+                <img src="../img/carrinho.png" width="60" style="opacity: 0.2; margin-bottom: 10px;">
+                <p>Seu carrinho está vazio.</p>
+            </div>
+            <div id="listaItens"></div>
+        </div>
+
+        <div class="carrinho-rodape">
+            <div class="linha-valor">
+                <span>Subtotal</span>
+                <span id="valorSubtotal">R$ 0,00</span>
+            </div>
+            <div class="linha-valor" style="font-size: 1.2rem; font-weight: bold; color: var(--azul);">
+                <span>Total</span>
+                <span id="valorTotal">R$ 0,00</span>
+            </div>
+          <button onclick="window.location.href='../html/carrinho.html'" class="btn-finalizar" id="btnFinalizar">
+    Finalizar Pedido
+</button>
+        </div>
+    </aside>
+
+    <div class="toast" id="toast"></div>
+
+    <script src="api.js"></script>
+    <script src="../Electron/renderer.js"></script>
+</body>
+</html>

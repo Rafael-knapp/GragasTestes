@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login - Gragás</title>
+  <link rel="stylesheet" href="../css/login.css">
+          <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+  <div class="container">
+    <div class="card">
+
+      <div class="header-azul">
+        <h1 class="logo-texto"> GraGás</h1>
+        <p class="logo-subtitulo">Entrega de gás na porta da sua casa</p>
+      </div>
+
+      <div class="corpo-card">
+        <div class="troca-tela">
+          <button type="button" class="BotaoEntrar active" id="BtnEntrarAba">Entrar</button>
+          <button type="button" class="BotaoCadastro" id="BtnCadastro">Criar conta</button>
+        </div>
+
+        <form id="FormularioLogin" class="formulario-email">
+          <div class="FormularioEmail">
+            <label class="form-label">E-mail</label>
+            <input type="email" id="EmailLogin" class="input" placeholder="seuemail@exemplo.com" required>
+          </div>
+
+          <div class="FormularioSenha">
+            <label class="Senha">Senha</label>
+            <input type="password" id="SenhaLogin" class="input" placeholder="••••••••" required>
+          </div>
+
+          <div class="esqueceu-senha">
+            <a href="#">Esqueceu a senha?</a>
+          </div>
+
+          <div class="Botaodelogin">
+            <button type="submit" class="Blogin" id="BtnSubmeterLogin">Entrar</button>
+          </div>
+        </form>
+
+        <form id="FormularioCadastro" class="Formulario-Cadastro" style="display: none;">
+
+          <p class="Titulo-sessao">Dados de cadastro</p>
+
+          <div class="form-group">
+            <label class="FormularioNome">Nome completo <span class="texto-vermelho">*</span></label>
+            <input type="text" class="input" placeholder="Seu nome completo" required>
+          </div>
+
+          <div class="FormularioCPF">
+            <label class="CPF">CPF <span class="texto-vermelho">*</span></label>
+            <input type="text" id="cpf" class="input" placeholder="000.000.000-00" maxlength="14" required>
+          </div>
+
+          <div class="FormularioDataNasc">
+            <div class="FormularioData">
+              <label class="Data">Data de nascimento <span class="texto-vermelho">*</span></label>
+              <input type="date" class="input" required>
+            </div>
+            <div class="FormularioTelefone">
+              <label class="Telefone">Telefone <span class="texto-vermelho">*</span></label>
+              <input type="tel" id="telefone" class="input" placeholder="(00) 00000-0000" maxlength="15" required>
+            </div>
+          </div>
+
+          <p class="Titulo-sessao">Dados de Acesso</p>
+
+          <div class="FormularioEmail">
+            <label class="Email">E-mail <span class="texto-vermelho">*</span></label>
+            <input type="email" class="input" placeholder="seuemail@exemplo.com" required>
+          </div>
+
+          <div class="FormularioSenha">
+            <label class="Senha">Senha <span class="texto-vermelho">*</span></label>
+            <input type="password" class="input" placeholder="••••••••" required>
+          </div>
+
+          <div class="FormularioConfirmarSenha">
+            <label class="ConfirmarSenha">Confirmar senha <span class="texto-vermelho">*</span></label>
+            <input type="password" class="input" placeholder="••••••••" required>
+          </div>
+
+          <div class="FormularioBotoes">
+            <button type="submit" class="BotaoRegistrar">Registrar</button>
+            <button type="button" class="BotaoCancelar" id="BtnCancelar">Cancelar</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+  <script src="../Electron/renderer.js"></script>
+</body>
+
+</html>

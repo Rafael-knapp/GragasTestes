@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Carrinho GraGás</title>  
+          <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/carrinho.css">
+</head>
+<body>
+  <header class="Carrinho-header">
+    <div class="container-sm">
+      <button class="volta-btn" onclick="window.location.href='principal.html'">
+        Voltar
+      </button>
+      <div class="Header-titulo">
+        <h1>Meu Carrinho</h1>
+      </div>
+    </div>
+  </header>
+
+  <main class="Carrinho-main">
+    <div class="container-sm">
+      
+      <div class="Endereco-card">
+        <div class="endereço-icone">
+          <img src="../img/iconedeloc.png" alt="Localização">
+        </div>
+        <div class="endereco-info">
+          <h3 class="address-title">Endereço de entrega</h3>
+          <p id="enderecoEntrega" class="Endereco">Carregando endereço...</p>
+          <button class="EnderecoLink" onclick="window.location.href='localizacao.html'">
+            Alterar endereço
+          </button>
+        </div>
+      </div>
+
+      <div class="carrinho-itens-card">
+        <div class="card-header">
+          <h2 class="card-title">Seus itens</h2>
+        </div>
+
+        <div id="carrinho-vazio" class="carrinho-vazio">
+
+          <img src="../img/carrinho.png" alt="Carrinho Vazio" class="carrinho-vazio-img">
+          
+          <p class="vazio-texto">Seu carrinho está vazio</p>
+          <p class="vazio-descricao">Adicione itens para continuar</p>
+          <button class="btn-carrinho-vazio" onclick="window.location.href='principal.html'">
+            Ver produtos
+          </button>
+        </div>
+
+        <div id="carrinho-itens" class="carrinho-itens">
+          </div>
+      </div>
+
+      <div id="secaode-cupom" class="cupom-card">
+          <h3 class="card-titulo">Cupom de desconto</h3>
+          <div id="Cupom-sucedido" class="cupom-sucesso">
+            <p>Cupom aplicado! 10% de desconto.</p>
+          </div>
+          <div id="cupomFORM" class="couponFORM">
+            <input type="text" id="inputCupom" class="input" placeholder="Ex: GRAGAS10">
+            <button class="btn-aplic-cupom" onclick="aplicarCupom()">Aplicar</button>
+          </div>
+      </div>
+
+      <div id="resumoPedido" class="resumo-pedido">
+        <h3 class="Resumo-titulo">Resumo do pedido</h3>
+        <div class="resumo-valores">
+          <div class="resumo-linha">
+            <p>Subtotal</p>
+            <strong id="subtotal">R$ 0,00</strong>
+          </div>
+          <div class="resumo-linha">
+            <p>Taxa de entrega</p>
+            <strong id="taxaEntrega">R$ 5,50</strong>
+          </div>
+          <div id="descontoResumo" class="resumo-linha desconto-texto">
+            <p>Desconto</p>
+            <strong id="desconto">R$ 0,00</strong>
+          </div>
+          <div class="resumo-linha total-container">
+            <p>Total</p>
+            <strong id="total" class="total-valores">R$ 0,00</strong>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <div id="rodape-checkout" class="checkout-rodape">
+    <div class="container-checkout">
+      <button class="checkout-btn" id="btnFinalizar" onclick="finalizarPedido()">
+        <p>Finalizar pedido</p>
+        <strong id="total-rodape">R$ 0,00</strong>
+      </button>
+    </div>
+  </div>
+
+  <script src="electron/renderer.js"></script>
+</body>
+</html>

@@ -1,0 +1,284 @@
+/* Configurações Gerais e Reset */
+* {
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.card01 {
+    background: white;
+    border-radius: 1.5rem;
+    box-shadow: 0 25px 50px rgba(0,0,0,0.15);
+}
+
+.header01 {
+    background: linear-gradient(135deg, #2563eb 0%, #1d4ed8 100%);
+    padding: 2rem;
+    text-align: center;
+    color: white;
+}
+
+.input:focus {
+    border-color: var(--azul);
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+}
+
+body {
+    background-color: #f3f4f6;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+/* Container e Card Principal */
+.container01 {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.card01 {
+    background: white;
+    border-radius: 1.5rem;
+    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.15);
+    width: 100%;
+    max-width: 480px;
+    overflow: hidden;
+    animation: fadeIn 0.5s ease-out;
+}
+
+/* Cabeçalho */
+.header01 {
+    background: linear-gradient(135deg, #2563eb 0%, #1d4ed8 100%);
+    padding: 2rem;
+    text-align: center;
+    color: white;
+}
+
+.logo-text {
+    font-size: 1.75rem;
+    font-weight: 800;
+    margin: 0 0 0.5rem 0;
+    letter-spacing: -1px;
+}
+
+.page-title {
+    font-size: 1.25rem;
+    font-weight: 700;
+    margin: 0 0 0.5rem 0;
+}
+
+.page-subtitle {
+    color: #dbeafe;
+    font-size: 0.9rem;
+    margin: 0;
+    line-height: 1.4;
+}
+
+/* Tela de Escolha (Botão Manual) */
+.TelaEscolha {
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.BotaoDeOpcao {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    padding: 1.25rem;
+    border: 2px solid #e5e7eb;
+    border-radius: 1rem;
+    background: white;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-align: left;
+}
+
+.BotaoDeOpcao:hover {
+    border-color: #2563eb;
+    background: #eff6ff;
+    transform: translateY(-2px);
+}
+
+.TitleOpcao {
+    font-weight: 700;
+    color: #1f2937;
+    margin: 0 0 0.25rem 0;
+    font-size: 1.1rem;
+}
+
+.SubTitulo {
+    font-size: 0.875rem;
+    color: #6b7280;
+    margin: 0;
+}
+
+.Instrucoes {
+    text-align: center;
+    font-size: 0.75rem;
+    color: #9ca3af;
+    margin-top: 0.5rem;
+}
+
+/* Formulário de Endereço */
+.endereco-form {
+    padding: 0 2rem 2rem 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+}
+
+.sucesso-alert {
+    display: flex;
+    align-items: center;
+    background: #d1fae5;
+    border: 1px solid #6ee7b7;
+    border-radius: 0.75rem;
+    padding: 0.75rem 1rem;
+    margin-bottom: 0.5rem;
+}
+
+.sucesso-alert p {
+    font-size: 0.85rem;
+    color: #065f46;
+    margin: 0;
+    font-weight: 500;
+}
+
+.FormularioDados {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+}
+
+.Formulario01 {
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: #374151;
+}
+
+.input {
+    width: 100%;
+    padding: 0.75rem 1rem;
+    border: 1px solid #d1d5db;
+    border-radius: 0.5rem;
+    font-size: 1rem;
+    transition: border-color 0.2s;
+}
+
+.input:focus {
+    outline: none;
+    border-color: #2563eb;
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+}
+
+/* Linhas duplas (Número/Complemento e Cidade/UF) */
+.FormularioLinha {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+}
+
+/* Wrapper do CEP com Spinner */
+.Icon-Wrapper {
+    position: relative;
+}
+
+.CarregarInput {
+    position: absolute;
+    right: 0.75rem;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.spinner-pequeno {
+    width: 1.2rem;
+    height: 1.2rem;
+    border: 2px solid #dbeafe;
+    border-top-color: #2563eb;
+    border-radius: 50%;
+    animation: spin 0.8s linear infinite;
+}
+
+/* Mensagens de Erro */
+.ErroMensagem {
+    color: #ef4444;
+    font-size: 0.75rem;
+    margin: 0;
+}
+
+.text-red {
+    color: #ef4444;
+}
+
+/* Botões de Ação */
+.BotaosLC {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.btn-voltar, .btn-confirmar {
+    flex: 1;
+    padding: 0.875rem;
+    border-radius: 0.75rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s;
+    border: none;
+    font-size: 0.95rem;
+}
+
+.btn-voltar {
+    background: #f3f4f6;
+    color: #4b5563;
+}
+
+.btn-voltar:hover {
+    background: #e5e7eb;
+}
+
+.btn-confirmar {
+    background: #2563eb;
+    color: white;
+}
+
+.btn-confirmar:hover {
+    background: #1d4ed8;
+    box-shadow: 0 4px 12px rgba(37, 99, 235, 0.2);
+}
+
+/* Animações */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes spin {
+    to { transform: rotate(360deg); }
+}
+
+/* Responsividade */
+@media (max-width: 480px) {
+    .FormularioLinha {
+        grid-template-columns: 1fr;
+    }
+    
+    .card01 {
+        border-radius: 1rem;
+    }
+
+    .header01 {
+        padding: 1.5rem;
+    }
+}
+
+/* Adicione isso ao seu CSS para suavizar a troca */
+#enderecoForm.active {
+    display: flex;
+    animation: fadeIn 0.4s ease-out;
+}

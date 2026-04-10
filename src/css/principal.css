@@ -1,0 +1,249 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', system-ui, sans-serif;
+}
+
+:root {
+    --azul: #2563eb;
+    --cinza: #f3f4f6;
+    --verde: #10b981;
+    --branco: #ffffff;
+    --texto: #333;
+}
+
+/* ==================== GERAL ==================== */
+body {
+    background: var(--cinza);
+    color: var(--texto);
+    overflow-x: hidden;
+}
+
+/* ==================== NAVBAR ==================== */
+.navbar {
+    background: var(--azul);
+    color: white;
+    height: 65px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.navbar-logo { display: flex; align-items: center; gap: 10px; }
+.navbar-logo img { height: 35px; }
+
+.navbar-acoes { display: flex; gap: 15px; }
+
+.btn-carrinho, .btn-perfil {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    position: relative;
+}
+
+.btn-carrinho img, .btn-perfil img { width: 30px; }
+.btn-perfil img { border-radius: 50%; }
+
+.badge-carrinho {
+    position: absolute;
+    top: -5px;
+    right: -5px;
+    background: red;
+    color: white;
+    border-radius: 50%;
+    padding: 2px 6px;
+    font-size: 10px;
+    font-weight: bold;
+}
+
+/* ==================== BANNER ENDEREÇO ==================== */
+.banner-endereco {
+    background: var(--branco);
+    padding: 15px 20px;
+    border-bottom: 1px solid #ddd;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+}
+
+.bloco-endereco-info { display: flex; align-items: center; gap: 10px; }
+.icon-pin { width: 20px; }
+.icon-seta { width: 12px; opacity: 0.5; }
+
+/* ==================== CONTEÚDO PRINCIPAL ==================== */
+.main-wrapper {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 30px 20px;
+}
+
+.secao-boas-vindas { text-align: center; margin-bottom: 40px; }
+
+.grid-produtos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.card-produto {
+    background: var(--branco);
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    width: 210px;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.card-produto:hover { transform: translateY(-5px); }
+
+.produto-imagem img {
+    width: 80px;
+    height: 80px;
+    object-fit: contain;
+    margin-bottom: 12px;
+}
+
+.preco {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--azul);
+    margin: 8px 0 12px;
+}
+
+.btn-adicionar {
+    background: var(--azul);
+    color: white;
+    border: none;
+    padding: 12px;
+    border-radius: 8px;
+    width: 100%;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.btn-adicionar:hover { background: #1e40af; }
+
+/* ==================== CARRINHO DRAWER ==================== */
+.carrinho-drawer {
+    position: fixed;
+    top: 0;
+    right: -400px;
+    width: 380px;
+    height: 100%;
+    background: var(--branco);
+    z-index: 300;
+    transition: right 0.4s ease;
+    display: flex;
+    flex-direction: column;
+    box-shadow: -5px 0 15px rgba(0,0,0,0.1);
+}
+
+.carrinho-drawer.aberto { right: 0; }
+
+.overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.5);
+    display: none;
+    z-index: 200;
+}
+
+.overlay.ativo { display: block; }
+
+.carrinho-header {
+    background: var(--azul);
+    color: white;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.btn-fechar-carrinho {
+    background: none;
+    border: none;
+    cursor: pointer;
+    filter: brightness(0) invert(1);
+}
+
+.carrinho-corpo {
+    flex: 1;
+    overflow-y: auto;
+    padding: 20px;
+}
+
+.item-carrinho {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 12px 0;
+    border-bottom: 1px solid #eee;
+}
+
+.item-carrinho img { width: 45px; height: 45px; object-fit: contain; }
+
+.carrinho-rodape {
+    padding: 20px;
+    border-top: 1px solid #eee;
+    background: #f9f9f9;
+}
+
+.linha-valor {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 8px;
+}
+
+.linha-valor.total {
+    font-size: 1.25rem;
+    font-weight: bold;
+    color: var(--azul);
+    margin: 15px 0;
+}
+
+.btn-finalizar {
+    background: var(--verde);
+    color: white;
+    border: none;
+    padding: 15px;
+    border-radius: 8px;
+    width: 100%;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 1.05rem;
+}
+
+.btn-finalizar:disabled {
+    background: #94a3b8;
+    cursor: not-allowed;
+}
+
+/* ==================== TOAST ==================== */
+.toast {
+    position: fixed;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #333;
+    color: white;
+    padding: 12px 25px;
+    border-radius: 30px;
+    opacity: 0;
+    transition: all 0.3s ease;
+    z-index: 400;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+
+.toast.visivel {
+    opacity: 1;
+    bottom: 40px;
+}

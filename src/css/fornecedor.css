@@ -1,0 +1,204 @@
+/* Configurações Gerais */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+:root {
+    --azul: #2563eb;
+    --azul-escuro: #1e40af;
+    --verde: #10b981;
+    --cinza-fundo: #f3f4f6;
+    --branco: #ffffff;
+    --texto: #333;
+}
+
+.produto-card-item {
+    background: var(--branco);
+    display: flex;
+    align-items: center;
+    padding: 15px;
+    border-radius: 15px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+}
+
+.btn-add {
+    background-color: var(--verde);
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+
+body {
+    background-color: var(--cinza-fundo);
+    color: var(--texto);
+    padding-bottom: 80px; /* Espaço para o footer não cobrir conteúdo */
+}
+
+.container-sm {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Header */
+.HeaderDetalhes {
+    background-color: var(--azul);
+    color: white;
+    padding: 20px 0;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.Volte-btn {
+    background: rgba(255, 255, 255, 0.2);
+    border: none;
+    color: white;
+    padding: 8px 15px;
+    border-radius: 20px;
+    cursor: pointer;
+    margin-bottom: 15px;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+.Volte-btn:hover {
+    background: rgba(255, 255, 255, 0.3);
+}
+
+.HeaderFornecedor {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+/* Lista de Produtos */
+.MainDetalhes {
+    margin-top: 30px;
+}
+
+.secao-titulo {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+    color: var(--azul);
+}
+
+.produtos-lista {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+/* Card de Produto (Estilo compatível com as imagens) */
+.produto-card-item {
+    background: var(--branco);
+    display: flex;
+    align-items: center;
+    padding: 15px;
+    border-radius: 15px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+    transition: transform 0.2s;
+}
+
+.produto-card-item:hover {
+    transform: scale(1.02);
+}
+
+.produto-card-item img {
+    width: 70px;
+    height: 70px;
+    object-fit: contain; /* Garante que o ícone do gás/válvula não distorça */
+    margin-right: 15px;
+}
+
+.info-produto {
+    flex: 1;
+}
+
+.info-produto strong {
+    display: block;
+    font-size: 16px;
+    margin-bottom: 5px;
+}
+
+.info-produto span {
+    color: var(--azul);
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.btn-add {
+    background-color: var(--verde);
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn-add:hover {
+    background-color: #059669;
+}
+
+/* Footer do Carrinho */
+.Carrinho-footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: var(--branco);
+    padding: 15px 0;
+    box-shadow: 0 -5px 15px rgba(0,0,0,0.1);
+    z-index: 100;
+}
+
+.Carrinho-btn-footer {
+    background-color: var(--azul);
+    color: white;
+    width: 100%;
+    border: none;
+    padding: 15px 20px;
+    border-radius: 12px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    transition: background 0.3s;
+}
+
+.Carrinho-btn-footer:hover {
+    background-color: var(--azul-escuro);
+}
+
+.Carrinho-footer-esquerda {
+    display: flex;
+    align-items: center;
+}
+
+.Carrinho-footer-icon {
+    width: 24px;
+    height: 24px;
+    margin-right: 10px;
+    filter: brightness(0) invert(1); /* Deixa o ícone do carrinho branco */
+}
+
+.Carrinho-footer-badge {
+    background: rgba(255, 255, 255, 0.2);
+    padding: 4px 10px;
+    border-radius: 10px;
+    margin-right: 10px;
+    font-size: 14px;
+}
+
+.Carrinho-footer-total {
+    font-size: 18px;
+}

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Detalhes do Fornecedor</title>
+          <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/fornecedor.css">
+</head>
+<body>
+
+  <header class="HeaderDetalhes">
+    <div class="Container-sm">
+      <button class="Volte-btn" onclick="window.location.href='principal.html'">
+        Voltar
+      </button>
+
+      <div class="HeaderFornecedor" id="HeaderFornecedor">
+        </div>
+    </div>
+  </header>
+
+  <main class="MainDetalhes">
+    <div class="container-sm">
+      <h2 class="secao-titulo">Produtos Disponíveis</h2>
+      <div class="produtos-lista" id="ProdutosLista">
+        </div>
+    </div>
+  </main>
+
+  <div id="FooterCarrinho" class="Carrinho-footer">
+    <div class="container-sm">
+      <button class="Carrinho-btn-footer" onclick="window.location.href='carrinho.html'">
+        <div class="Carrinho-footer-esquerda">
+          <img src="../img/carrinho.png" alt="Carrinho" width="25" style="margin-right: 10px; filter: brightness(0) invert(1);">
+          <span>Ver carrinho</span>
+        </div>
+        <div class="Carrinho-footer-direita">
+          <span id="cartItemsCount" class="Carrinho-footer-badge">0 itens</span>
+          <span id="cartTotalValue" class="Carrinho-footer-total">R$ 0,00</span>
+        </div>
+      </button>
+    </div>
+  </div>
+
+  <script src="../Electron/renderer.js"></script>
+</body>
+</html>

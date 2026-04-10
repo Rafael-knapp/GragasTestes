@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Localização - GraGás</title>
+    <link rel="stylesheet" href="../css/localizacao.css">
+            <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    
+    <div class="container01">
+        <div class="card01">
+            
+            <div class="header01">
+                <div class="logo">
+                    <h1 class="logo-text">GraGás</h1>
+                </div>
+                <h2 class="page-title">Onde você está?</h2>
+                <p class="page-subtitle">Precisamos do seu endereço para encontrar fornecedores na sua região</p>
+            </div>
+
+            <div class="TelaEscolha" id="telaSelecao">
+                <button type="button" class="BotaoDeOpcao" id="Manual">
+                    <div class="OpcaoConteudo">
+                        <p class="TitleOpcao">Digitar meu endereço</p>
+                        <p class="SubTitulo">Informe o CEP ou endereço completo</p>
+                    </div>
+                </button>
+                <p class="Instrucoes">Seus dados de localização ficam apenas no seu aparelho</p>
+            </div>
+
+            <form id="enderecoForm" class="endereco-form">
+                
+                <div id="AlertSucesso" class="sucesso-alert">
+                    <p>Localização detectada! Confirme ou ajuste os dados abaixo.</p>
+                </div>
+
+                <div class="FormularioDados">
+                    <label for="cep" class="Formulario01">CEP</label>
+                    <div class="Icon-Wrapper">
+                        <input type="text" id="cep" class="input" placeholder="00000-000" maxlength="9" required>
+                        <div id="CarregarCep" class="CarregarInput">
+                            <div class="spinner-pequeno"></div>
+                        </div>
+                    </div>
+                    <p id="ErroCep" class="ErroMensagem"></p>
+                    <p class="Instrucoes">Digite o CEP para preencher automaticamente</p>
+                </div>
+
+                <div class="FormularioDados">
+                    <label for="rua" class="Formulario01">Rua / Logradouro</label>
+                    <input type="text" id="rua" class="input" placeholder="Nome da rua, avenida, etc." required>
+                </div>
+
+                <div class="FormularioLinha">
+                    <div class="FormularioDados">
+                        <label for="numero" class="Formulario01">Número <span class="text-red">*</span></label>
+                        <input type="text" id="numero" class="input" placeholder="Ex: 123" required>
+                    </div>
+                    <div class="FormularioDados">
+                        <label for="complemento" class="Formulario01">Complemento</label>
+                        <input type="text" id="complemento" class="input" placeholder="Apto, bloco...">
+                    </div>
+                </div>
+
+                <div class="FormularioDados">
+                    <label for="bairro" class="Formulario01">Bairro</label>
+                    <input type="text" id="bairro" class="input" placeholder="Nome do bairro" required>
+                </div>
+
+                <div class="FormularioLinha">
+                    <div class="FormularioDados">
+                        <label for="cidade" class="Formulario01">Cidade</label>
+                        <input type="text" id="cidade" class="input" placeholder="Sua cidade" required>
+                    </div>
+                    <div class="FormularioDados">
+                        <label for="uf" class="Formulario01">UF</label>
+                        <input type="text" id="uf" class="input" placeholder="SP" maxlength="2" required>
+                    </div>
+                </div>
+
+                <div class="BotaosLC">
+                    <button type="button" onclick="window.location.href='principal.html'" class="btn-voltar" id="btnVoltar">Voltar</button>
+                    
+                    <button type="submit" class="btn-confirmar" id="btnConfirmar">Confirmar Endereço</button>
+                </div>
+            </form>
+
+        </div>
+    </div>
+
+   <script src="../electron/renderer.js"></script>
+</body>
+</html>
